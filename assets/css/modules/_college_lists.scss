@@ -1,0 +1,45 @@
+#college_lists {
+  min-height: 100vh;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .inner {
+    width: 100%;
+
+    .heading {
+      margin-bottom: 24px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      min-width: 768px;
+      border: 1px solid var(--color-gray);
+      border-collapse: collapse;
+      border-bottom: none;
+      margin-bottom: 32px;
+      text-align: center;
+      tr {
+        border: 1px solid var(--color-gray);
+
+        td,
+        th {
+          border-right: 1px solid var(--color-gray);
+          padding: 5px;
+        }
+
+        td.active {
+          color: var(--color-skyblue-light);
+        }
+
+        th.serial-no-col {
+          width: 150px;
+        }
+      }
+    }
+  }
+}

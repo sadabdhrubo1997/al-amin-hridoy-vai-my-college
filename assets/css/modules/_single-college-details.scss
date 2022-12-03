@@ -1,0 +1,94 @@
+#single_college_details {
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 769px) {
+    padding: 16px;
+  }
+
+  .heading {
+    background-color: var(--color-white);
+    border-radius: 6px 6px 0 0;
+    padding: 12px 0;
+  }
+  .inner {
+    padding: 6px 6px 32px 6px;
+    border-radius: 8px;
+    background-color: #e7e7e8;
+    width: 100%;
+
+    .details-wrapper {
+      padding: 16px;
+
+      .table-wrapper {
+        overflow-x: auto;
+      }
+
+      @media (min-width: 1024px) {
+        padding: 16px;
+      }
+      @media (min-width: 1280px) {
+        padding: 32px;
+      }
+
+      .top {
+        margin-bottom: 24px;
+
+        .row {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 8px;
+          flex-direction: column;
+
+          @media (min-width: 576px) {
+            flex-direction: row;
+            margin-bottom: 8px;
+          }
+
+          .col {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+
+            @media (min-width: 576px) {
+              margin-bottom: 0;
+              width: 45%;
+            }
+
+            b {
+              width: 50%;
+              display: flex;
+              justify-content: space-between;
+
+              @media (min-width: 576px) {
+                width: 35%;
+              }
+            }
+          }
+        }
+      }
+
+      table {
+        width: 100%;
+        min-width: 500px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        border-bottom: none;
+        margin-bottom: 32px;
+        tr {
+          border: 1px solid black;
+
+          td,
+          th {
+            border-right: 1px solid black;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+}

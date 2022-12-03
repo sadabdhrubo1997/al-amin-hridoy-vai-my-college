@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@300;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Alexandria', sans-serif;
+}
+
+input {
+  outline: none;
+  border: none;
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  &::-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.container-sm {
+  max-width: 900px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 18px;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 28px;
+  }
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 8px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--color-skyblue-light);
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 14px;
+  transition: 0.2s;
+  outline: none;
+  border: none;
+
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
+
+  &:hover {
+    background: var(--color-skyblue-light-hover);
+  }
+}
+
+.toggler-wrapper {
+  display: flex;
+  justify-content: center;
+
+  .form-toggler {
+    color: var(--color-skyblue-light);
+    transition: 0.2s;
+    cursor: pointer;
+    text-align: center;
+    font-size: 14px;
+
+    @media (min-width: 1024px) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: var(--color-skyblue-light-hover);
+    }
+  }
+}
