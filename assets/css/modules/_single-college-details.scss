@@ -36,6 +36,10 @@
 
       .top {
         margin-bottom: 24px;
+        padding: 0;
+        @media (min-width: 768px) {
+          padding: 0 48px;
+        }
 
         .row {
           display: flex;
@@ -51,21 +55,27 @@
           .col {
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             margin-bottom: 8px;
 
+            & > span {
+              width: 100px;
+              padding-left: 5px;
+            }
+
             @media (min-width: 576px) {
+              justify-content: space-between;
               margin-bottom: 0;
               width: 45%;
             }
 
             b {
-              width: 50%;
+              width: 80px;
               display: flex;
               justify-content: space-between;
 
               @media (min-width: 576px) {
-                width: 35%;
+                // width: 35%;
               }
             }
           }
@@ -74,7 +84,7 @@
 
       table {
         width: 100%;
-        min-width: 500px;
+        // min-width: 500px;
         border: 1px solid black;
         border-collapse: collapse;
         border-bottom: none;

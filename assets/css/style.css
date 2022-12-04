@@ -61,7 +61,7 @@ a {
 .heading {
   text-align: center;
   margin-bottom: 24px;
-  font-size: 18px;
+  font-size: 20px;
 }
 @media (min-width: 768px) {
   .heading {
@@ -137,7 +137,12 @@ a {
 }
 #search_area .inner {
   width: 100%;
-  padding: 0 16px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  #search_area .inner {
+    padding: 0 16px;
+  }
 }
 #search_area form {
   display: none;
@@ -175,34 +180,40 @@ a {
   width: 100%;
   flex-direction: column;
   display: flex;
-  gap: 12px;
-}
-@media (min-width: 768px) {
-  #search_area form .form-body .checkbox-wrapper {
-    gap: 16px;
-  }
+  gap: 24px;
 }
 #search_area form .form-body .checkbox-wrapper .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#search_area form .form-body .checkbox-wrapper .row b {
+  width: 100%;
+  text-align: center;
 }
 @media (min-width: 576px) {
   #search_area form .form-body .checkbox-wrapper .row {
     flex-direction: row;
   }
-}
-#search_area form .form-body .checkbox-wrapper .row b {
-  width: 30%;
+  #search_area form .form-body .checkbox-wrapper .row b {
+    width: 30%;
+    text-align: left;
+  }
 }
 #search_area form .form-body .checkbox-wrapper .row label {
   display: inline-flex;
-  gap: 6px;
+  gap: 4px;
   font-size: 14px;
   cursor: pointer;
-  width: 20%;
+  width: 29%;
+}
+@media (min-width: 768px) {
+  #search_area form .form-body .checkbox-wrapper .row label {
+    width: 20%;
+  }
 }
 #search_area form .form-body .checkbox-wrapper .row label input {
   width: unset;
@@ -255,6 +266,12 @@ a {
 }
 #single_college_details .inner .details-wrapper .top {
   margin-bottom: 24px;
+  padding: 0;
+}
+@media (min-width: 768px) {
+  #single_college_details .inner .details-wrapper .top {
+    padding: 0 48px;
+  }
 }
 #single_college_details .inner .details-wrapper .top .row {
   display: flex;
@@ -271,28 +288,27 @@ a {
 #single_college_details .inner .details-wrapper .top .row .col {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 8px;
+}
+#single_college_details .inner .details-wrapper .top .row .col > span {
+  width: 100px;
+  padding-left: 5px;
 }
 @media (min-width: 576px) {
   #single_college_details .inner .details-wrapper .top .row .col {
+    justify-content: space-between;
     margin-bottom: 0;
     width: 45%;
   }
 }
 #single_college_details .inner .details-wrapper .top .row .col b {
-  width: 50%;
+  width: 80px;
   display: flex;
   justify-content: space-between;
 }
-@media (min-width: 576px) {
-  #single_college_details .inner .details-wrapper .top .row .col b {
-    width: 35%;
-  }
-}
 #single_college_details .inner .details-wrapper table {
   width: 100%;
-  min-width: 500px;
   border: 1px solid black;
   border-collapse: collapse;
   border-bottom: none;
@@ -309,7 +325,7 @@ a {
 
 #college_lists {
   min-height: 100vh;
-  padding: 24px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -325,7 +341,6 @@ a {
 }
 #college_lists .inner table {
   width: 100%;
-  min-width: 768px;
   border: 1px solid var(--color-gray);
   border-collapse: collapse;
   border-bottom: none;
@@ -335,10 +350,23 @@ a {
 #college_lists .inner table tr {
   border: 1px solid var(--color-gray);
 }
-#college_lists .inner table tr td,
-#college_lists .inner table tr th {
+#college_lists .inner table tr th,
+#college_lists .inner table tr td {
   border-right: 1px solid var(--color-gray);
   padding: 5px;
+  text-align: center;
+}
+#college_lists .inner table tr th.eiin, #college_lists .inner table tr th.min-gpa,
+#college_lists .inner table tr td.eiin,
+#college_lists .inner table tr td.min-gpa {
+  display: none;
+}
+@media (min-width: 640px) {
+  #college_lists .inner table tr th.eiin, #college_lists .inner table tr th.min-gpa,
+#college_lists .inner table tr td.eiin,
+#college_lists .inner table tr td.min-gpa {
+    display: inline-block;
+  }
 }
 #college_lists .inner table tr td.active {
   color: var(--color-skyblue-light);

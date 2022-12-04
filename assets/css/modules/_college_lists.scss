@@ -1,6 +1,6 @@
 #college_lists {
   min-height: 100vh;
-  padding: 24px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +17,6 @@
     }
     table {
       width: 100%;
-      min-width: 768px;
       border: 1px solid var(--color-gray);
       border-collapse: collapse;
       border-bottom: none;
@@ -26,10 +25,22 @@
       tr {
         border: 1px solid var(--color-gray);
 
-        td,
-        th {
+        th,
+        td {
           border-right: 1px solid var(--color-gray);
           padding: 5px;
+          text-align: center;
+
+          &.eiin,
+          &.min-gpa {
+            display: none;
+          }
+          @media (min-width: 640px) {
+            &.eiin,
+            &.min-gpa {
+              display: inline-block;
+            }
+          }
         }
 
         td.active {
